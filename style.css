@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+&{
+    font-family: Inter;
+}
+h1{
+    color: white;
+    font-size: 36px;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    background-color: #5990FF;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    padding: 50px;
+    max-width: 565px;
+    height: 730px;
+    border-radius: 45px;
+}
+.wrapper.wait{
+    max-height: 550px;
+}
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.block-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+.two{
+    flex-direction: row;
+}
+.block{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    align-self: stretch;
+    gap: 15px;
+
+    flex: 1 0 0;
+    height: 70px;
+    padding: 0px 5px 0px 25px;
+
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+
+    color: #000;
+
+    
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.sber{
+    padding: 0px 25px 0px 15px;
+}
+.ruble{
+    justify-content: space-between;
+}
+.ruble-nocopy{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.copy-btn{
+    cursor: copy;
+}
+.number{
+    padding: 5px 5px 5px 20px;
+    justify-content: space-between;
+}
+.timer{
+    display: flex;
+    height: 49px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    padding: 0 18px;
+
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+    flex: none;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+    width: 60px;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+}
+button:hover{
+    transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    height: 100%;
+    justify-content: flex-end;
+}
+.text-wrapper{
+    padding: 0 10px;
+
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.submit{
+    width: 100%;
+    background-color: white;
+    color: black;
+
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    cursor: pointer;
+}
+.logo{
+    object-fit: contain;
+}

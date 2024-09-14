@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plategia Pay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img class="logo" src="source/logo.png" alt="platega.io">
+            <div class="block timer">
+                <img src="source/timer.png" alt="Осталось">
+                15 минут
+            </div>
+        </div>
+        <div class="middle">
+            <h1>Необходимо сделать перевод на карту</h1>
+            <div class="block-wrapper">
+                <div class="block-wrapper two">
+                    <div class="block sber">
+                        <img id="sberbank_logo" src="source/sber-2x.png" srcset="source/sber.png" alt="Сбер" style="display: none;">
+                        <div id="div_bank">Анализ банка...</div>
+                    </div>
+                    <div class="block ruble">
+                        <div class="ruble-nocopy">
+                            <img src="source/ruble.png" alt="₽">
+                            <div id="div_summ">Считаю...</div>
+                        </div>
+                        <button class="copy-btn" onclick="copyRuble()"><img src="source/copy.png"></button>
+                    </div>
+                </div>
+                <div class="block number">
+                    <div id="div_card">Проверяю номер карты...</div>
+                    <button class="copy-btn" onclick="copyCard()"><img src="source/copy.png"></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="text-wrapper">Проверьте что перевели точную сумму, иначе мы не сможем зачислить перевод</div>
+            <button class="submit">Я оплатил</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

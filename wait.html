@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plategia Pay - Wait</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper wait">
+        <div class="header">
+            <img class="logo" src="source/logo.png" alt="platega.io">
+        </div>
+        <h1 id="h1_status">Проверяем поступление средств...</h1>
+        <div class="footer">
+            <div class="text-wrapper">Проверьте что перевели точную сумму, иначе мы не сможем зачислить перевод</div>
+            <button class="submit" id="btn_status">Ожидание</button>
+        </div>
+    </div>
+    <script>
+        async function main(){
+            let status = "PENDING"
+            while (status = "PENDING"){               
+                if (status == "CONFIRMED"){
+                    document.getElementById("h1_status").innerHTML = "Успешно подтверждено"
+                    document.getElementById("btn_status").innerHTML = "Вернуться к заказу"
+                    console.log(status)
+                    break
+                }
+                if(status == "CANCEL"){
+                    document.getElementById("h1_status").innerHTML = "Оплата отменена"
+                    document.getElementById("btn_status").innerHTML = "Вернуться к заказу"
+                    console.log("CANCEL")
+                    break
+                }
+                if(status == "PAID"){
+                    document.getElementById("h1_status").innerHTML = "Успешно оплачено"
+                    document.getElementById("btn_status").innerHTML = "Вернуться к заказу"
+                    console.log("PAID")
+                    break
+                }
+
+                console.log(status)
+                resp = await fetch("http://185.18.52.13/api/transaction/{id}") 
+                data = await resp.json()
+                status = data["status"]
+            }
+        }
+        main()
+    </script>
+</body>
+</html>
