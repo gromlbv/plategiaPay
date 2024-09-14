@@ -43,7 +43,7 @@
                 console.log(status)
                 resp = await fetch("http://185.18.52.13/api/transaction/{id}") 
                 data = await resp.json()
-                status = data["status"]
+                status = data["transaction"]["status"]
             }
         }
         main()
